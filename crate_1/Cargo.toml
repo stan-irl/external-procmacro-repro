@@ -1,0 +1,16 @@
+[package]
+name = "crate_1"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "crate_1"
+crate-type = ["lib", "cdylib"]
+
+[dependencies]
+uniffi = { git = "https://github.com/mozilla/uniffi-rs", branch = "main" }
+
+[build-dependencies]
+uniffi = { git = "https://github.com/mozilla/uniffi-rs", branch = "main", features = [
+    "build",
+] }
